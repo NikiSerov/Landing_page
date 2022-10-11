@@ -1,3 +1,8 @@
+.page-header {
+    display: flex;
+    justify-content: space-around;
+}
+
 .navigation {
     display: flex;
     justify-content: space-around;
