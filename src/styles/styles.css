@@ -37,6 +37,7 @@ button {
     background: transparent;
     border: none;
     position: relative;
+    font-family: 'Rubik', sans-serif;
 }
 
 /* page header */
@@ -48,6 +49,8 @@ button {
     align-items: center;
     padding: 0 80px 0 64px;
     height: 80px;
+    position: relative;
+    z-index: 2;
 }
 
 .navigation {
@@ -160,4 +163,108 @@ button {
 .promo-section {
     padding: 110px 64px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 85px;
+}
+
+.promo-title span {
+    display: block;
+    color: var(--orange);
+}
+
+.sale-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.sale-price span {
+    font-size: 48px;
+    display: inline-block;
+}
+
+.sale-price span:first-child {
+    font-size: 36px;
+    margin-right: 35px;
+    color: #ADADAD;
+    text-decoration: line-through;
+}
+
+.benefits {
+    display: flex;
+    width: 85%;
+    align-items: center;
+    margin-bottom: 65px;
+    justify-content: space-between;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit-img {
+    width: 192px;
+    height: 165px;
+    margin-bottom: 78px;
+    transition: transform 0.3s;
+}
+
+.benefit-img:hover {
+    transform: scale(1.1);
+}
+
+.benefit-item.selected .benefit-img {
+    width: 480px;
+    height: 160px;
+    margin-bottom: 45px;
+} 
+
+.benefit-text {
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.benefit-text span:last-child {
+    display: block;
+    color: var(--orange);
+}
+
+.benefit-item.selected .benefit-text {
+    font-size: 36px;
+    line-height: 1.5;
+
+}
+
+.benefit-item.selected .benefit-text span:last-child {
+    font-size: 24px;
+}
+
+.checkout-btn {
+    width: 256px;
+    height: 56px;
+    background-color: var(--orange);
+    text-align: center;
+    border-radius: 7px;
+    font-size: 18px;
+    cursor: pointer;
+    transition-property: background-color, transform;
+    transition-duration: 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #c28c01;
+    transform: scale(1.05);
 }
