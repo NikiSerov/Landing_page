@@ -53,11 +53,19 @@ button {
     z-index: 2;
 }
 
+.navigation-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .navigation {
-    width: 57%;
+    width: 63%;
+    display: flex;
 }
 
 .nav-list {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -81,7 +89,7 @@ button {
 }
 
 .telephone {
-    margin-left: -5%;
+    margin-left: 3%;
 }
 
 .cart {
@@ -148,7 +156,7 @@ button {
 .subtitle-text {
     font-size: 18px;
     line-height: 1.2;
-    color:black;
+    color: black;
 }
 
 .product-img {
@@ -229,7 +237,7 @@ button {
     width: 480px;
     height: 160px;
     margin-bottom: 45px;
-} 
+}
 
 .benefit-text {
     font-size: 18px;
