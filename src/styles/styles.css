@@ -729,7 +729,7 @@ main {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 475px) {
     .main-section {
         height: 520px;
         padding: 40px 30px;
