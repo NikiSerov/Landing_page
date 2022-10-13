@@ -3,8 +3,15 @@
 }
 
 @keyframes menuMove {
-    from {top: -310px; opacity: 0.5;}
-    to {top: 0; opacity: 1;}
+    from {
+        top: -310px;
+        opacity: 0.5;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 
@@ -33,7 +40,9 @@ a {
 input,
 textarea,
 button {
+    appearance: none;
     -webkit-appearance: none;
+    border-radius: 0;
     -webkit-border-radius: 0;
 }
 
@@ -575,4 +584,151 @@ main {
         left: 0;
     }
 
+    .main-section {
+        padding: 50px 30px;
+    }
+
+    .title-text {
+        font-size: 16px;
+        margin-bottom: 60px;
+        width: 330px;
+    }
+
+    .subtitle-text {
+        font-size: 14px;
+    }
+
+    .product-img {
+        top: 5%;
+    }
+
+    .promo-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .benefit-item.selected .benefit-text {
+        font-size: 24px;
+    }
+
+    .benefit-item.selected .benefit-text span:last-child {
+        font-size: 20px;
+    }
+
+    .checkout-btn {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width: 670px) {
+    .main-section {
+        padding: 45px 30px;
+    }
+
+    .title-text {
+        font-size: 12px;
+        margin-bottom: 40px;
+        width: 220px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .subtitle-text {
+        font-size: 10px;
+        width: 100px;
+    }
+
+    .product-img {
+        top: 7%;
+    }
+
+    .promo-section {
+        padding-top: 80px;
+    }
+
+    .promo-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .sale-price span {
+        font-size: 24px;
+    }
+
+    .sale-price span:first-child {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    .benefit-item.selected .benefit-text {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .benefit-text {
+        font-size: 14px;
+    }
+
+    .benefit-item.selected .benefit-text {
+        font-size: 20px;
+    }
+
+    .benefit-item.selected .benefit-text span:last-child {
+        font-size: 18px;
+    }
+
+    .checkout-btn {
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 540px) {
+    .product-img {
+        top: 18%;
+    }
+
+    .promo-title {
+        font-size: 20px;
+    }
+
+    .promo-section {
+        padding-top: 75px;
+    }
+
+    .sale-price span {
+        font-size: 20px;
+    }
+
+    .sale-price span:first-child {
+        font-size: 18px;
+        margin-right: 18px;
+    }
+
+    .benefit-item.selected .benefit-text {
+        font-size: 16px;
+    }
+
+    .benefit-item.selected .benefit-text span:last-child {
+        font-size: 14px;
+    }
+
+    .benefit-text {
+        font-size: 12px;
+    }
+
+    .benefit-img {
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 450px) {
+    
 }
