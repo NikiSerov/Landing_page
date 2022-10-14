@@ -807,3 +807,14 @@ main {
         font-size: 18px;
     }
 }
+
+@media (max-width: 360px) {
+    .main-section {
+        padding: 30px 20px;
+        height: 450px;
+    }
+
+    .product-img {
+        top: 23%;
+    }
+}
