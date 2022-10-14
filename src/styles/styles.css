@@ -343,7 +343,6 @@ main {
 .benefit-item.selected .benefit-text {
     font-size: 36px;
     line-height: 1.5;
-
 }
 
 .benefit-item.selected .benefit-text span:last-child {
@@ -515,7 +514,6 @@ main {
         width: 225px;
         height: 50px;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -574,8 +572,9 @@ main {
     .burger-menu {
         position: absolute;
         display: inline-block;
-        right: 30px;
-        top: 19px;
+        top: 20px;
+        right: -5px;
+        padding: 25px 30px;
     }
 
     .menu-btn {
@@ -620,8 +619,6 @@ main {
         height: 50px;
         font-size: 16px;
     }
-
-
 }
 
 @media (max-width: 670px) {
@@ -737,25 +734,21 @@ main {
 
     .title {
         font-size: 12vw;
-        text-align: center;
     }
 
     .title-text {
         font-size: 12px;
         margin-bottom: 20px;
         width: 150px;
-        margin-left: 3%;
     }
 
     .subtitle {
         font-size: 14px;
-        margin-left: 3%;
     }
 
     .subtitle-text {
         font-size: 10px;
         width: 100px;
-        margin-left: 3%;
     }
 
     .product-img {
@@ -809,6 +802,19 @@ main {
 }
 
 @media (max-width: 360px) {
+    .page-header {
+        padding: 0 20px;
+    }
+
+    .burger-menu {
+        right: 2px;
+        padding: 25px 20px;
+    }
+
+    .cart {
+        right: 40px;
+    }
+
     .main-section {
         padding: 30px 20px;
         height: 450px;
@@ -816,5 +822,34 @@ main {
 
     .product-img {
         top: 23%;
+    }
+
+    .promo-section {
+        padding: 70px 20px 60px;
+    }
+
+    .promo-title {
+        font-size: 18px;
+    }
+
+    .sale-price span {
+        font-size: 18px;
+    }
+
+    .sale-price span:first-child {
+        font-size: 16px;
+    }
+
+    .benefit-text {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    .benefit-item.selected .benefit-text {
+        font-size: 18px;
+    }
+
+    .benefit-item.selected .benefit-text span:last-child {
+        font-size: 16px;
     }
 }
