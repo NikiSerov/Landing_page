@@ -573,8 +573,8 @@ main {
         position: absolute;
         display: inline-block;
         top: 20px;
-        right: -5px;
-        padding: 25px 30px;
+        right: 0px;
+        padding: 25px 28px;
     }
 
     .menu-btn {
@@ -807,8 +807,8 @@ main {
     }
 
     .burger-menu {
-        right: 2px;
-        padding: 25px 20px;
+        right: 0;
+        padding: 25px 23px;
     }
 
     .cart {
