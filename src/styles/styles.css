@@ -53,6 +53,121 @@ button {
     font-family: 'Rubik', sans-serif;
 }
 
+/* modal */
+/* 
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.modal-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body {
+    margin: auto;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid var(--orange);
+    padding: 100px 15px 110px 15px;
+    position: relative;
+    background-color: black;
+}
+
+.modal-title {
+    font-size: 28px;
+    font-weight: 700;
+} */
+
+/* MODAL_TEST */
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100; 
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-container {
+     display: flex;
+     width: 100%;
+     height: 100%;
+}
+
+.modal-body {
+    margin: auto;
+    width: 500px;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid var(--orange);
+    text-align: center;
+    padding: 70px 15px 70px 15px;
+    position: relative;
+}
+
+.modal-body p {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+
+.modal-body input {
+    display: block;
+    margin: 25px auto 0px auto;
+    width: 330px;
+    padding: 17px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    border-style: none;
+}
+
+.modal-body input:focus {
+    outline: 2px solid var(--orange);
+}
+
+.modal-body button {
+    cursor: pointer;
+    display: block;
+    width: 330px;
+    margin: 70px auto 0px auto;
+    padding: 20px 0px;
+    font-size: 16px;
+    font-weight: 400px;
+    background-color: var(--orange);
+    border-radius: 10px;
+}
+
+.modal-close {
+    color: white;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+}
+
+.modal-close:hover {
+    color: var(--orange);
+}
+
 /* page header */
 
 .page-header {
