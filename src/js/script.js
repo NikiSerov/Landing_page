@@ -3,6 +3,8 @@ const navContainer = document.querySelector(".navigation-container");
 const openModal = document.querySelector(".checkout-btn");
 const closeModal = document.querySelector(".modal-close");
 const modal = document.querySelector(".modal");
+const placeOrder = document.querySelector(".place-order")
+const form = document.querySelector(".order-form");
 
 function toggleMobileMenu() {
     navContainer.classList.toggle("visible");
@@ -27,5 +29,24 @@ openModal.addEventListener("click", function (e) {
 })
 
 closeModal.addEventListener("click", function () {
-        modal.classList.remove("active");
-    })
+    modal.classList.remove("active");
+})
+
+placeOrder.addEventListener("click", getFormValue)
+
+function getFormValue(event) {
+    event.preventDefault();
+
+    const name = form.querySelector('[name="name"]'),
+        tel = form.querySelector('[name="tel"]');
+
+    const data = {
+        name: name.value,
+        tel: tel.value
+    }
+
+    console.log(data);
+
+    modal.classList.remove("active");
+
+}
