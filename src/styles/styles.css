@@ -44,6 +44,14 @@ button {
     -webkit-appearance: none;
     border-radius: 0;
     -webkit-border-radius: 0;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
 }
 
 button {
@@ -52,39 +60,6 @@ button {
     position: relative;
     font-family: 'Rubik', sans-serif;
 }
-
-/* modal */
-/* 
-.modal {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 100;
-}
-
-.modal-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.modal-body {
-    margin: auto;
-    width: 500px;
-    border-radius: 10px;
-    border: 1px solid var(--orange);
-    padding: 100px 15px 110px 15px;
-    position: relative;
-    background-color: black;
-}
-
-.modal-title {
-    font-size: 28px;
-    font-weight: 700;
-} */
 
 /* MODAL_TEST */
 
@@ -97,18 +72,14 @@ button {
     background-color: transparent;
     z-index: 100; 
     transform: translateY(30%) scale(0);
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
+    display: flex;
+    justify-content: center;
 }
 
 .modal.active {
     transform: translateY(0%) scale(100%);
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-container {
-     display: flex;
-     width: 100%;
-     height: 100%;
 }
 
 .modal-body {
@@ -118,55 +89,103 @@ button {
     border-radius: 10px;
     border: 1px solid var(--orange);
     text-align: center;
-    padding: 70px 15px 70px 15px;
+    padding: 70px 40px 55px;
     position: relative;
 }
 
-.modal-body p {
+.modal-title  {
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
-.modal-body input {
+.form-input {
     display: block;
-    margin: 25px auto 0px auto;
-    width: 330px;
-    padding: 17px 20px;
+    width: 100%;
+    padding: 18px 20px;
     border-radius: 10px;
     font-size: 18px;
-    font-weight: 400;
-    border-style: none;
 }
 
-.modal-body input:focus {
+.input-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-input-container {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-input:focus {
     outline: 2px solid var(--orange);
 }
 
-.modal-body button {
+.form-input-container_checkbox {
+    display: flex;
+}
+
+.form-input[type="checkbox"] {
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border-radius: 5px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-input-container_checkbox .input-label {
+    cursor: pointer;
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+
+.form-input[type="checkbox"]::after {
+    display: none;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: var(--orange);
+    border-radius: 2px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.form-input[type="checkbox"]:checked::after {
+    display: inline-block;
+}
+
+.form-input-container_textarea .form-input {
+    height: 100px;
+}
+
+.place-order-button {
     cursor: pointer;
     display: block;
     width: 330px;
-    margin: 70px auto 0px auto;
+    margin: 55px auto 0 auto;
     padding: 20px 0px;
     font-size: 16px;
-    font-weight: 400px;
     background-color: var(--orange);
     border-radius: 10px;
 }
 
-.modal-close {
+.modal-close-button {
     color: white;
     text-align: center;
     position: absolute;
     cursor: pointer;
     font-size: 30px;
-    top: 20px;
-    right: 20px;
-    padding: 5px 10px;
+    top: 0;
+    right: 0;
+    padding: 30px 35px;
 }
 
-.modal-close:hover {
+.modal-close-button:hover {
     color: var(--orange);
 }
 

@@ -15,59 +15,34 @@
 </head>
 
 <body>
-    <!-- <div class="modal">
-        <div class="modal-container">
-            <div class="modal-body">
-                <h4 class="modal-title">Оформить заказ</h4>
-                <form action="" class="form-container" method="post">
-                    <div class="form-field">
-                        <label for="name">ФИО</label>
-                        <input type="text" name="customer-name" id="name" placeholder="Иванов Иван Иванович" required
-                            autofocus>
-                    </div>
-                    <div class="form-field">
-                        <label for="phone-number">Контактный телефон</label>
-                        <input type="tel" name="customer-phone-number" id="phone-number" placeholder="+7-909-909-09-09"
-                            pattern="\+?[0-9\s\-\(\)]+" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="customer-email" id="email" placeholder="ivanivanov@mail.ru">
-                    </div>
-                    <div class="form-field">
-                        <label for="adress">Адрес</label>
-                        <input type="text" name="customer-adress" id="adress" placeholder="Москва, улица Пушкина, дом Колотушкина" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="quantity">Укажите количество упаковок</label>
-                        <input type="number" name="product-quantity" id="quantity" min="1"
-                        max="100" placeholder="100" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="agree-check">Я согласен с правилами обработки данных</label>
-                        <input type="checkbox" name="customer-agree-check" id="agree-check" checked>
-                    </div>
-                    <input type="submit" value="Оформить" class="submit-button">
-                </form>
-            </div>
-        </div>
-    </div> -->
 
     <!-- MODAL_TEST -->
 
-    <div class="modal">
-        <div class="modal-container">
-            <div class="modal-body">
-                <p>Оставить заявку</p>
-                <form action="#" method="post" class="order-form">
-                    <input type="text" placeholder="Имя" name="name">
-                    <input type="text" placeholder="Телефон" name="tel">
-                    <button class="place-order">Оставить заказ</button>
-                </form>
-                <div class="modal-close">
-                    &#10006;
+    <div class="modal active">
+        <div class="modal-body">
+            <h4 class="modal-title">Оставить заявку</h4>
+            <form action="#" method="post" name="order-form" class="order-form" autocomplete="on">
+                <div class="form-input-container">
+                    <label for="name" class="input-label">Имя</label>
+                    <input type="text" placeholder="Имя" name="name" id="name" class="form-input">
                 </div>
-            </div>    
+                <div class="form-input-container">
+                    <label for="tel" class="input-label">Телефон</label>
+                    <input type="number" placeholder="Телефон" name="tel" id="tel" class="form-input">
+                </div>
+                <div class="form-input-container form-input-container_checkbox">
+                    <input type="checkbox" name="sales" id="sales" class="form-input ">
+                    <label for="sales" class="input-label">Хочу получать рассылку на скидки</label>
+                </div>
+                <div class="form-input-container form-input-container_textarea">
+                    <label for="comment" class="input-label">Оставьте комментраий к заказу</label>
+                    <textarea name="comment" id="comment" class="form-input" placeholder="Ваш комментарий"></textarea>
+                </div>
+                <input type="submit" class="place-order-button" value="Оставить заказ">
+            </form>
+            <button class="modal-close-button">
+                &#10006;
+            </button>
         </div>
     </div>
 

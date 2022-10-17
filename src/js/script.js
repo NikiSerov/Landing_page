@@ -1,9 +1,8 @@
 const burger = document.querySelector(".burger-menu");
 const navContainer = document.querySelector(".navigation-container");
 const openModal = document.querySelector(".checkout-btn");
-const closeModal = document.querySelector(".modal-close");
+const closeModal = document.querySelector(".modal-close-button");
 const modal = document.querySelector(".modal");
-const placeOrder = document.querySelector(".place-order")
 const form = document.querySelector(".order-form");
 
 function toggleMobileMenu() {
@@ -20,33 +19,43 @@ function closeMobileMenu(e) {
     }
 }
 
-document.addEventListener("click", closeMobileMenu);
-burger.addEventListener("click", toggleMobileMenu);
-
-openModal.addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.classList.add('active');
-})
-
-closeModal.addEventListener("click", function () {
-    modal.classList.remove("active");
-})
-
-placeOrder.addEventListener("click", getFormValue)
-
 function getFormValue(event) {
     event.preventDefault();
 
-    const name = form.querySelector('[name="name"]'),
-        tel = form.querySelector('[name="tel"]');
+    const elements = event.target.elements;
+    const data = {};
 
-    const data = {
-        name: name.value,
-        tel: tel.value
+    for (let i = 0; i < elements.length; i++) {
+        const elem = elements[i];
+        const name = elem.name;
+        const type = elem.type;
+
+        switch (type) {
+            case 'checkbox':
+                data[name] = elem.checked;
+                break;
+            case 'submit':
+                break;
+            default:
+                data[name] = elem.value;
+                break;
+        }
     }
 
-    console.log(data);
-
+    console.log(data)
     modal.classList.remove("active");
+};
 
-}
+document.addEventListener("click", closeMobileMenu);
+burger.addEventListener("click", toggleMobileMenu);
+form.addEventListener("submit", getFormValue);
+
+openModal.addEventListener("click", function () {
+    modal.classList.add('active');
+});
+
+closeModal.addEventListener("click", function () {
+    modal.classList.remove("active");
+});
+
+
