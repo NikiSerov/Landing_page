@@ -43,6 +43,7 @@ function getFormValue(event) {
     }
 
     console.log(data)
+    
     modal.classList.remove("active");
 };
 
