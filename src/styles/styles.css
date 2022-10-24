@@ -68,6 +68,7 @@ button {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -82,7 +83,7 @@ input::-webkit-inner-spin-button {
     background-color: transparent;
     z-index: 100; 
     transform: translateY(30%) scale(0);
-    transition: .2s ease-in-out;
+    transition: .15s ease-in-out;
     display: flex;
     justify-content: center;
 }
