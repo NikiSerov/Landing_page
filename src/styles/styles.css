@@ -14,11 +14,20 @@
     }
 }
 
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 15px; 
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(243, 199, 2);
+    border-radius: 5px;
 }
 
 body {
@@ -26,6 +35,10 @@ body {
     color: #FFFFFF;
     font-weight: 400;
     width: 100%;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 ul {
@@ -67,12 +80,10 @@ button {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
 }
-
-/* MODAL_TEST */
 
 .modal {
     position: fixed;
@@ -81,16 +92,24 @@ input::-webkit-inner-spin-button {
     left: 0;
     top: 0;
     background-color: transparent;
-    z-index: 100; 
-    transform: translateY(30%) scale(0);
-    transition: .15s ease-in-out;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: .25s ease-in-out;
     display: flex;
     justify-content: center;
+    align-items: center;
+    scrollbar-width: none;
 }
 
 .modal.active {
-    transform: translateY(0%) scale(100%);
+    transform: translateY(0%);
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-container {
+    overflow: hidden;
+    height: 80%;
+    border-radius: 10px;
 }
 
 .modal-body {
@@ -102,12 +121,18 @@ input::-webkit-inner-spin-button {
     text-align: center;
     padding: 70px 40px 55px;
     position: relative;
+    height: 100%;
+    overflow-y: auto;
 }
 
-.modal-title  {
+.modal-title {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 40px;
+}
+
+.modal ::-webkit-scrollbar {
+    width: 0;
 }
 
 .form-input {
@@ -174,11 +199,19 @@ input::-webkit-inner-spin-button {
     height: 100px;
 }
 
+.input-error .form-input {
+    outline: 2px solid red;
+}
+
+.input-error .input-label {
+    color: red;
+}
+
 .place-order-button {
     cursor: pointer;
     display: block;
     width: 330px;
-    margin: 55px auto 0 auto;
+    margin: 59px auto 0 auto;
     padding: 20px 0px;
     font-size: 16px;
     background-color: var(--orange);
@@ -194,13 +227,48 @@ input::-webkit-inner-spin-button {
     top: 0;
     right: 0;
     padding: 30px 35px;
+    transition: color 0.3s;
 }
 
 .modal-close-button:hover {
     color: var(--orange);
 }
 
-/* page header */
+.pop-up {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background-color: black;
+    z-index: 100;
+    border: 2px solid var(--orange);
+    border-radius: 10px;
+    padding: 12px;
+    transform: scale(0);
+    transition: all .4s ease-in-out; 
+}
+
+.pop-up-visible {
+    transform: scale(1);
+}
+
+.pop-up-content {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.pop-up-close-button {
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 7px;
+    transition: color 0.2s;
+}
+
+.pop-up-close-button:hover {
+    color: var(--orange);
+}
 
 .page-header {
     background-color: black;
@@ -349,8 +417,6 @@ input::-webkit-inner-spin-button {
     font-size: 12px;
     line-height: 16px;
 }
-
-/* main section */
 
 main {
     overflow: hidden;
