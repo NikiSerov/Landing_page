@@ -24,7 +24,6 @@ function closeMobileMenu(e) {
 }
 
 function getFormValue(event) {
-
     const elements = event.target.elements;
     const data = {};
 
@@ -110,6 +109,7 @@ function validateTel(value) {
     if (trimmedValue[0] === '+') {
         return isInt(trimmedValue.slice(1).replaceAll('.', ','));
     }
+
     return isInt(trimmedValue.replaceAll('.', ','));
 }
 
@@ -119,11 +119,13 @@ function isInt(value) {
 
 function validateForm(validatedFields) {
     const errorInputs = [];
+
     for (let i = 0; i < validatedFields.length; i++) {
         if (!validatedFields[i].validationFunc(validatedFields[i].element.value)) {
             errorInputs.push(validatedFields[i].element);
         }
     }
+
     return errorInputs;
 }
 
@@ -135,6 +137,7 @@ function displayErrors(errorInputs) {
 
 function clearErrors(form, errorClass) {
     const errorElems = form.querySelectorAll(`.${errorClass}`);
+    
     errorElems.forEach((item) => {
         item.classList.remove(inputErrorClass);
     })
@@ -147,6 +150,7 @@ function resetForm(form, errorClass) {
 
 function popUpOpen() {
     popUp.classList.add("pop-up-visible");
+
     setTimeout(() => {
         popUp.classList.remove("pop-up-visible");
     }, 2500);
