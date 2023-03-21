@@ -1,3 +1,3 @@
 # TestTask for WillSkill
 
-GitHub Pages: https://nikiserov.github.io/TestTask/
+Live on: https://test-task-tawny-psi.vercel.app/
